@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-change-gcp-bucket-settings.html 
 keywords: google cloud storage buckets, google cloud storage, edit buckets, change buckets 
-summary: Cuando su sistema Google Cloud Storage esté disponible en la página Sistemas, podrá cambiar algunas propiedades del depósito directamente desde la consola de NetApp . 
+summary: Cuando su sistema Google Cloud Storage esté disponible en la página Sistemas, podrá cambiar algunas propiedades del depósito directamente desde la NetApp Console. 
 ---
 = Cambiar la configuración del depósito de Google Cloud Storage
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: Cuando su sistema Google Cloud Storage esté disponible en la página S
 
 
 [role="lead"]
-Cuando su sistema Google Cloud Storage esté disponible en la página Sistemas, podrá cambiar algunas propiedades del depósito directamente desde la consola de NetApp .
+Cuando su sistema Google Cloud Storage esté disponible en la página Sistemas, podrá cambiar algunas propiedades del depósito directamente desde la NetApp Console.
 
 Tenga en cuenta que no puede cambiar el nombre del depósito, el proyecto de Google ni la configuración de protección.
 
@@ -25,7 +25,7 @@ Las propiedades del depósito que puedes cambiar incluyen:
 * Modo de replicación turbo: solo si el depósito está en una ubicación de doble región.
 
 
-Puede cambiar estas configuraciones de depósito directamente desde la consola de NetApp haciendo clic enimage:button-horizontal-more.gif["el botón de tres puntos más"] y luego *Editar detalles del depósito* para un depósito.
+Puede cambiar estas configuraciones de depósito directamente desde la NetApp Console haciendo clic enimage:button-horizontal-more.gif["el botón de tres puntos más"] y luego *Editar detalles del depósito* para un depósito.
 
 image:screenshot-edit-gcp-bucket.png["Una captura de pantalla que muestra cómo seleccionar el botón Editar detalles del depósito para editar las propiedades del depósito."]
 

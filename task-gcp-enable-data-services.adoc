@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-gcp-enable-data-services.html 
 keywords: google buckets, google storage, google cloud storage working environment, google cloud storage buckets, system 
-summary: Cuando descubre depósitos de Google Cloud Storage en la consola de NetApp , puede usar los servicios de datos de NetApp para realizar copias de seguridad, organizar en niveles y sincronizar datos. 
+summary: Cuando descubres depósitos de Google Cloud Storage en la NetApp Console, puedes usar los servicios de datos de NetApp para realizar copias de seguridad, organizar en niveles y sincronizar datos. 
 ---
 = Utilice los servicios de datos de NetApp con los buckets de Google Cloud Storage
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: Cuando descubre depósitos de Google Cloud Storage en la consola de Net
 
 
 [role="lead"]
-Cuando descubre depósitos de Google Cloud Storage en la consola de NetApp , puede usar los servicios de datos de NetApp para realizar copias de seguridad, organizar en niveles y sincronizar datos.
+Cuando descubres depósitos de Google Cloud Storage en la NetApp Console, puedes usar los servicios de datos de NetApp para realizar copias de seguridad, organizar en niveles y sincronizar datos.
 
 * Utilice * NetApp Backup and Recovery* para realizar copias de seguridad de los datos de sus sistemas ONTAP locales y Cloud Volumes ONTAP en el almacenamiento de objetos de Google Cloud.
 +
@@ -38,4 +38,4 @@ Para comenzar, vaya a la página Sistemas y arrastre y suelte el sistema de orig
 
 También puede seleccionar su sistema de Google Cloud Storage y hacer clic en *Copiar y sincronizar* en el panel Servicios para sincronizar datos hacia o desde los depósitos de Cloud Storage.
 
-https://docs.netapp.com/us-en/data-services-copy-sync/concept-cloud-sync.html["Obtenga más información sobre el servicio de copia y sincronización de NetApp"^] .
+https://docs.netapp.com/us-en/data-services-copy-sync/concept-cloud-sync.html["Obtenga más información sobre el servicio de NetApp Copy and Sync"^] .

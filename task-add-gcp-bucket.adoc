@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-add-gcp-bucket.html 
 keywords: google cloud storage buckets, google cloud storage, add buckets 
-summary: Cuando su sistema Google Cloud Storage esté disponible en la página Sistemas, podrá agregar depósitos adicionales directamente desde la consola de NetApp . 
+summary: Cuando su sistema Google Cloud Storage esté disponible en la página Sistemas, podrá agregar depósitos adicionales directamente desde la NetApp Console. 
 ---
 = Agregar depósitos de Google Cloud Storage
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: Cuando su sistema Google Cloud Storage esté disponible en la página S
 
 
 [role="lead"]
-Cuando su sistema Google Cloud Storage esté disponible en la página Sistemas, podrá agregar depósitos adicionales directamente desde la consola de NetApp .
+Cuando su sistema Google Cloud Storage esté disponible en la página Sistemas, podrá agregar depósitos adicionales directamente desde la NetApp Console.
 
 .Pasos
 . Desde la página Sistemas, haga doble clic en el sistema Google Cloud Storage para ver la página Descripción general de los depósitos de Google Cloud Storage y haga clic en *Agregar depósito*.
@@ -24,7 +24,7 @@ Se muestra la página _Agregar depósito_.
 . Ingrese la información requerida en la sección _Detalles del proyecto_.
 +
 ** *Nombre del depósito*: ingrese el nombre que desea utilizar para el depósito. https://cloud.google.com/storage/docs/buckets#naming["Consulte la documentación de Google Cloud para conocer los requisitos de nombres."^] .
-** *Proyecto de Google*: seleccione el proyecto de Google que será el propietario del depósito.  Este puede ser el proyecto principal donde se implementó el agente de consola o puede ser un proyecto diferente.  Si no ve ningún proyecto adicional en la lista desplegable, entonces aún no ha asociado la cuenta de servicio de la consola de NetApp con otros proyectos.  Vaya a la consola de Google Cloud, abra el servicio IAM y seleccione el proyecto.  Agregue la cuenta de servicio con el rol de consola de NetApp a ese proyecto.  Necesitarás repetir este paso para cada proyecto.  NOTA: Esta es la cuenta de servicio que configuró para la consola de NetApp . https://docs.netapp.com/us-en/console-setup-admin/task-set-up-permissions-google.html#set-up-permissions-for-the-connector["como se describe en esta página"^] .
+** *Proyecto de Google*: seleccione el proyecto de Google que será el propietario del depósito.  Este puede ser el proyecto principal donde se implementó el agente de consola o puede ser un proyecto diferente.  Si no ve ningún proyecto adicional en la lista desplegable, entonces aún no ha asociado la cuenta de servicio de la NetApp Console con otros proyectos.  Vaya a la consola de Google Cloud, abra el servicio IAM y seleccione el proyecto.  Agregue la cuenta de servicio con el rol de NetApp Console a ese proyecto. Necesitarás repetir este paso para cada proyecto.  NOTA: Esta es la cuenta de servicio que configuró para la NetApp Console. https://docs.netapp.com/us-en/console-setup-admin/task-set-up-permissions-google.html#set-up-permissions-for-the-connector["como se describe en esta página"^] .
 ** *Etiquetas*: Las etiquetas son metadatos para sus recursos de Google Cloud.  Puede agregar hasta 10 pares clave:valor de etiqueta al crear un depósito. https://cloud.google.com/compute/docs/labeling-resources["Consulte la documentación de Google Cloud para obtener más información sobre las etiquetas."^] .
 
 

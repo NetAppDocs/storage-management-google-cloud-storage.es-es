@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-viewing-gcp-storage.html 
 keywords: google cloud storage buckets, google cloud storage, google cloud storage working environment, system 
-summary: Después de instalar un agente de consola en Google Cloud, la consola de NetApp puede descubrir automáticamente información sobre los depósitos de Google Cloud que residen en la cuenta de Google donde está instalado el agente de consola.  Se agrega un sistema de almacenamiento de Google Cloud a la consola de NetApp para que pueda ver esta información. 
+summary: Después de instalar un agente de consola en Google Cloud, la NetApp Console puede descubrir automáticamente información sobre los depósitos de Google Cloud que residen en la cuenta de Google donde está instalado el agente de consola.  Se agrega un sistema de almacenamiento de Google Cloud a la NetApp Console para que pueda ver esta información. 
 ---
 = Ver sus depósitos de Google Cloud Storage
 :hardbreaks:
@@ -14,22 +14,22 @@ summary: Después de instalar un agente de consola en Google Cloud, la consola d
 
 
 [role="lead"]
-Después de instalar un agente de consola en Google Cloud, la consola de NetApp puede descubrir automáticamente información sobre los depósitos de Google Cloud Storage que residen en la cuenta de Google donde está instalado el agente de consola.  Se agrega un sistema de almacenamiento de Google Cloud a la consola para que puedas ver esta información.
+Después de instalar un agente de consola en Google Cloud, la NetApp Console puede descubrir automáticamente información sobre los depósitos de Google Cloud Storage que residen en la cuenta de Google donde está instalado el agente de consola.  Se agrega un sistema de almacenamiento de Google Cloud a la consola para que puedas ver esta información.
 
-Puede ver detalles sobre sus depósitos de Google Cloud Storage, incluida la ubicación, el estado de acceso, la clase de almacenamiento, la capacidad total y utilizada, y más.  Estos depósitos se pueden utilizar como destinos para operaciones de NetApp Backup and Recovery, NetApp Cloud Tiering o NetApp Copy and Sync.
+Puede ver detalles sobre sus depósitos de Google Cloud Storage, incluida la ubicación, el estado de acceso, la clase de almacenamiento, la capacidad total y utilizada, y más.  Estos depósitos se pueden utilizar como destinos para operaciones de NetApp Backup and Recovery, NetApp Cloud Tiering o NetApp Copy and Sync .
 
 .Pasos
 . https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-google.html["Instalar un agente de consola"^]en la cuenta de Google donde desea ver sus depósitos de Google Cloud Storage.
-. Desde el menú de la consola de NetApp , seleccione *Almacenamiento* y luego *Administración*.
+. Desde el menú de la NetApp Console , seleccione *Almacenamiento* y luego *Administración*.
 
 
 Poco después debería aparecer automáticamente un sistema de almacenamiento en la nube de Google.
 
 image:screenshot-gcp-cloud-storage-we.png["Una captura de pantalla de un sistema de almacenamiento en la nube de Google."]
 
-. Seleccione el sistema y seleccione una acción en el panel derecho si desea habilitar los servicios de la consola de NetApp con Google Cloud Storage.
+. Seleccione el sistema y seleccione una acción en el panel derecho si desea habilitar los servicios de la NetApp Console con Google Cloud Storage.
 +
-link:task-gcp-enable-data-services.html["Vea qué servicios de la consola de NetApp están disponibles y aprenda a usarlos con sus depósitos de Google Cloud Storage"] .
+link:task-gcp-enable-data-services.html["Vea qué servicios de la NetApp Console están disponibles y aprenda a usarlos con sus depósitos de Google Cloud Storage"] .
 
 . Seleccione *Ingresar al sistema* o haga doble clic en el sistema para ver detalles sobre los depósitos en su cuenta de Google.
 +
