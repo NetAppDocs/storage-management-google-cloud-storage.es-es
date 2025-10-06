@@ -1,0 +1,103 @@
+---
+sidebar: sidebar 
+permalink: task-add-gcp-bucket.html 
+keywords: google cloud storage buckets, google cloud storage, add buckets 
+summary: Cuando su sistema Google Cloud Storage esté disponible en la página Sistemas, podrá agregar depósitos adicionales directamente desde la consola de NetApp . 
+---
+= Agregar depósitos de Google Cloud Storage
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cuando su sistema Google Cloud Storage esté disponible en la página Sistemas, podrá agregar depósitos adicionales directamente desde la consola de NetApp .
+
+.Pasos
+. Desde la página Sistemas, haga doble clic en el sistema Google Cloud Storage para ver la página Descripción general de los depósitos de Google Cloud Storage y haga clic en *Agregar depósito*.
++
+Se muestra la página _Agregar depósito_.
+
+. Ingrese la información requerida en la sección _Detalles del proyecto_.
++
+** *Nombre del depósito*: ingrese el nombre que desea utilizar para el depósito. https://cloud.google.com/storage/docs/buckets#naming["Consulte la documentación de Google Cloud para conocer los requisitos de nombres."^] .
+** *Proyecto de Google*: seleccione el proyecto de Google que será el propietario del depósito.  Este puede ser el proyecto principal donde se implementó el agente de consola o puede ser un proyecto diferente.  Si no ve ningún proyecto adicional en la lista desplegable, entonces aún no ha asociado la cuenta de servicio de la consola de NetApp con otros proyectos.  Vaya a la consola de Google Cloud, abra el servicio IAM y seleccione el proyecto.  Agregue la cuenta de servicio con el rol de consola de NetApp a ese proyecto.  Necesitarás repetir este paso para cada proyecto.  NOTA: Esta es la cuenta de servicio que configuró para la consola de NetApp . https://docs.netapp.com/us-en/console-setup-admin/task-set-up-permissions-google.html#set-up-permissions-for-the-connector["como se describe en esta página"^] .
+** *Etiquetas*: Las etiquetas son metadatos para sus recursos de Google Cloud.  Puede agregar hasta 10 pares clave:valor de etiqueta al crear un depósito. https://cloud.google.com/compute/docs/labeling-resources["Consulte la documentación de Google Cloud para obtener más información sobre las etiquetas."^] .
+
+
+. En la sección _Ubicación_, seleccione el tipo de ubicación y la región (o regiones) donde se creará el depósito.  Puede seleccionar entre tres tipos diferentes de ubicaciones.
++
+[cols="35,65"]
+|===
+| Si selecciona "Tipo de ubicación"... | Luego seleccione... 
+
+
+| Región | Una sola región del campo "Regiones disponibles". 
+
+
+| Doble región  a| 
+La ubicación geográfica (un solo continente) en el campo "Ubicaciones disponibles" y, a continuación, seleccione dos regiones en el campo "Regiones disponibles".
+
+Puede habilitar la "Replicación Turbo" si desea garantizar la redundancia geográfica para todos los objetos recién escritos dentro de un objetivo de 15 minutos.
+
+
+
+| Multiregión | La multiregión geográfica del campo “Multiregiones disponibles”. 
+|===
++
+Tenga en cuenta que todos los datos de almacenamiento en la nube son redundantes en al menos dos zonas dentro de al menos un lugar geográfico tan pronto como los carga. https://cloud.google.com/storage/docs/locations["Consulte la documentación de Google Cloud para obtener más información sobre las ubicaciones de los buckets."^] .
+
+. En la sección _Clase de almacenamiento_, seleccione la clase de almacenamiento que se utilizará para los objetos en su depósito.  Puede seleccionar entre cuatro clases de almacenamiento o puede seleccionar _Autoclass_ y Google ajustará la clase según sea necesario.
++
+** *Estándar* - Ideal para datos a los que se accede con frecuencia (datos "activos") o que se almacenan solo por breves períodos de tiempo.
+** *Nearline*: un servicio de almacenamiento de bajo costo y gran durabilidad para almacenar datos a los que se accede con poca frecuencia.
+** *Coldline*: un servicio de almacenamiento muy duradero y de muy bajo costo para guardar datos a los que se accede con poca frecuencia.
+** *Archivo*: el servicio de almacenamiento más económico y altamente duradero para archivado de datos, respaldo en línea y recuperación ante desastres.
+** *Autoclass* - Transfiere automáticamente los objetos de su bucket a las clases de almacenamiento adecuadas según el patrón de acceso de cada objeto.
++
+El costo y las tarifas de recuperación son diferentes para cada clase de almacenamiento. https://cloud.google.com/storage/docs/storage-classes["Consulte la documentación de Google Cloud para obtener más información sobre las clases de almacenamiento."^] .
+
+
+
+. En la sección _Protección_, elija si desea utilizar alguna herramienta de protección de datos para proteger los objetos en el depósito, o alguna configuración de cifrado de datos para proteger el acceso a sus datos.
++
+*Herramientas de protección de datos*
+
++
+** *Ninguno*: de manera predeterminada, no hay herramientas de protección habilitadas en el depósito.
+** *Control de versiones de objetos*: el control de versiones de objetos es un medio para mantener múltiples versiones de un objeto en el mismo contenedor.  El depósito conserva una versión de objeto no actual cada vez que se actualiza, reemplaza o elimina una versión de objeto activo, manteniendo de forma continua una versión protegida del objeto.  Al seleccionar "Control de versiones de objetos", puede especificar dos opciones:
++
+*** *Número máximo de versiones por objeto*: ingrese el número de versiones no actuales por objeto que se crearán.
+*** *Caducar versiones no actuales después de* - Ingrese la cantidad de días después de los cuales se eliminarán los objetos más antiguos y no actuales.
+
+
+** *Política de retención*: una política de retención garantiza que todos los objetos actuales y futuros en el depósito no se puedan eliminar ni reemplazar hasta que alcancen la antigüedad definida en la política de retención.  Al seleccionar "Política de retención", puede especificar dos opciones:
++
+*** *Conservar objetos durante*: ingrese la cantidad de segundos, días, meses o años que se conservarán los objetos.
+*** *Marco de tiempo*: seleccione si el tiempo está en segundos, días, meses o años.
++
+Las herramientas de protección de políticas de retención y control de versiones de objetos no se pueden habilitar al mismo tiempo.  Consulte la documentación de Google Cloud para https://cloud.google.com/storage/docs/object-versioning["Más información sobre el control de versiones de objetos"^] , y https://cloud.google.com/storage/docs/bucket-lock["Más información sobre las políticas de retención"^] .
+
+
+
+
+
++
+*Herramientas de cifrado de datos*
+
++
+** *Clave de cifrado administrada por Google*: de forma predeterminada, se utilizan claves de cifrado administradas por Google para cifrar sus datos.
+** *Clave de cifrado administrada por el cliente*: puede utilizar sus propias claves administradas por el cliente para el cifrado de datos en lugar de utilizar las claves de cifrado predeterminadas administradas por Google.  Si planea utilizar sus propias claves administradas por el cliente, deberá haberlas creado previamente para poder seleccionar las claves en esta página.
++
+Las claves pueden estar en el mismo proyecto que el depósito, o puedes seleccionar un proyecto diferente.
+
++
+Consulte la documentación de Google Cloud para https://cloud.google.com/storage/docs/encryption/default-keys["Más información sobre las claves de cifrado administradas por Google"^] , y https://cloud.google.com/storage/docs/encryption/customer-managed-keys["Más información sobre las claves de cifrado administradas por el cliente"^] .
+
+
+
+. Haga clic en *Agregar* y se creará el depósito.
+

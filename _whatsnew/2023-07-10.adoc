@@ -1,0 +1,11 @@
+= Capacidad de agregar nuevos depósitos y administrar los existentes desde BlueXP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+
+
+=== Capacidad de agregar nuevos depósitos y administrar los existentes desde BlueXP
+
+Puedes ver los depósitos de Google Cloud Storage en BlueXP Canvas durante bastante tiempo. Ahora puede agregar nuevos depósitos y cambiar las propiedades de los depósitos existentes directamente desde BlueXP. https://docs.netapp.com/us-en/storage-management-google-cloud-storage/task-add-gcp-bucket.html["Vea cómo agregar nuevos depósitos de Google Cloud Storage"] .

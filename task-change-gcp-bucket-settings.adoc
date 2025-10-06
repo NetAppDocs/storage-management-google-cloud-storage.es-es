@@ -1,0 +1,58 @@
+---
+sidebar: sidebar 
+permalink: task-change-gcp-bucket-settings.html 
+keywords: google cloud storage buckets, google cloud storage, edit buckets, change buckets 
+summary: Cuando su sistema Google Cloud Storage esté disponible en la página Sistemas, podrá cambiar algunas propiedades del depósito directamente desde la consola de NetApp . 
+---
+= Cambiar la configuración del depósito de Google Cloud Storage
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cuando su sistema Google Cloud Storage esté disponible en la página Sistemas, podrá cambiar algunas propiedades del depósito directamente desde la consola de NetApp .
+
+Tenga en cuenta que no puede cambiar el nombre del depósito, el proyecto de Google ni la configuración de protección.
+
+Las propiedades del depósito que puedes cambiar incluyen:
+
+* Clase de almacenamiento para todos los objetos futuros en el bucket.
+* Puede elegir agregar, editar y eliminar etiquetas a los objetos en el depósito.
+* Modo de replicación turbo: solo si el depósito está en una ubicación de doble región.
+
+
+Puede cambiar estas configuraciones de depósito directamente desde la consola de NetApp haciendo clic enimage:button-horizontal-more.gif["el botón de tres puntos más"] y luego *Editar detalles del depósito* para un depósito.
+
+image:screenshot-edit-gcp-bucket.png["Una captura de pantalla que muestra cómo seleccionar el botón Editar detalles del depósito para editar las propiedades del depósito."]
+
+
+
+== Cambiar la clase de almacenamiento
+
+La sección de clase de almacenamiento le permite realizar solo ciertos cambios:
+
+* Si se seleccionó _Autoclass_ cuando se creó el depósito, puede deshabilitar Autoclass y seleccionar otra clase de almacenamiento.
+* Si se seleccionó otra clase de almacenamiento cuando se creó el depósito, puede cambiar a cualquier otra clase de almacenamiento, excepto _Autoclass_.
+
+
+Los objetos que estaban en una clase diferente permanecerán en esa clase, pero cualquier objeto nuevo usará la nueva configuración de clase.
+
+
+
+== Agregar o cambiar etiquetas para los objetos en el depósito
+
+Las etiquetas son metadatos que puede utilizar para agrupar recursos para identificar aplicaciones, entornos, regiones, proveedores de nube y más.  Las etiquetas constan de una clave y un valor.  Puede agregar etiquetas a un depósito para que se apliquen a los objetos cuando se agreguen al depósito.  También puede cambiar y eliminar etiquetas y valores de etiquetas.
+
+Después de agregar o editar una etiqueta, haga clic en *Aplicar* para guardar los cambios.  Si desea agregar más etiquetas, haga clic en *Agregar nueva etiqueta*.  Puede agregar hasta 10 etiquetas por contenedor.
+
+
+
+== Cambiar si la replicación turbo está habilitada en ubicaciones de doble región
+
+Si el depósito está en una ubicación de doble región, puede habilitar o deshabilitar si el modo de replicación turbo está habilitado o deshabilitado.  La "replicación turbo" le permite garantizar redundancia geográfica para todos los objetos recién escritos dentro de un plazo de 15 minutos.
+
+No se pueden cambiar otros detalles de ubicación una vez creado el depósito.
