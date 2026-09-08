@@ -31,6 +31,7 @@ image:screenshot-edit-gcp-bucket.png["Una captura de pantalla que muestra cómo 
 
 
 
+[[change-the-storage-class]]
 == Cambiar la clase de almacenamiento
 
 La sección de clase de almacenamiento le permite realizar solo ciertos cambios:
@@ -43,6 +44,7 @@ Los objetos que estaban en una clase diferente permanecerán en esa clase, pero 
 
 
 
+[[add-or-change-labels-for-objects-in-the-bucket]]
 == Agregar o cambiar etiquetas para los objetos en el depósito
 
 Las etiquetas son metadatos que puede utilizar para agrupar recursos para identificar aplicaciones, entornos, regiones, proveedores de nube y más.  Las etiquetas constan de una clave y un valor.  Puede agregar etiquetas a un depósito para que se apliquen a los objetos cuando se agreguen al depósito.  También puede cambiar y eliminar etiquetas y valores de etiquetas.
@@ -51,6 +53,7 @@ Después de agregar o editar una etiqueta, haga clic en *Aplicar* para guardar l
 
 
 
+[[change-whether-turbo-replication-is-enabled-in-dual-region-locations]]
 == Cambiar si la replicación turbo está habilitada en ubicaciones de doble región
 
 Si el depósito está en una ubicación de doble región, puede habilitar o deshabilitar si el modo de replicación turbo está habilitado o deshabilitado.  La "replicación turbo" le permite garantizar redundancia geográfica para todos los objetos recién escritos dentro de un plazo de 15 minutos.
